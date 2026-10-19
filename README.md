@@ -9,6 +9,7 @@ From your existing Quasar project, install axios and Cordova mode if not already
     npm install axios
     quasar mode add cordova
     cd src-cordova
+    cordova plugin add cordova-plugin-inappbrowser
     cordova plugin add cordova-plugin-customurlscheme --variable URL_SCHEME=imajora --variable ANDROID_SCHEME=imajora --variable ANDROID_HOST=auth
     cd ..
 
@@ -19,7 +20,7 @@ Set public URL values in your app's environment/config:
     API_BASE_URL=https://your-api.example.com/api
     GOOGLE_OAUTH_START_URL=https://your-api.example.com/auth/google/mobile
 
-Never put Google client secrets in the mobile app. Merge the cordova-deeplink.js script into the Cordova HTML shell before the app bundle. See docs/CORDOVA-CONFIG.md.
+Never put Google client secrets in the mobile app. Merge the cordova-deeplink.js script into the Cordova HTML shell before the app bundle. See docs/CORDOVA-CONFIG.md and docs/QUASAR-ENV.md.
 
 Build using: quasar build -m cordova -T android
 
